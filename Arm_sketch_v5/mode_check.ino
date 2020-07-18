@@ -1,0 +1,31 @@
+void mode_check()
+{
+  input_reading();
+  if(EB2Times=1)
+  {
+    smooth_mode();
+    mode=1;
+  }
+  if(EB2Times=2)
+  {
+    instant_mode();
+    mode=2;
+  }
+  if(EB2Times=3)
+  {
+    EB2Times=0;
+    mode=0;
+  }
+  if(EB3Times=1)
+  {
+    learning_mode();
+    mode=3;
+  }
+  if(EB3Times=2)
+  {
+    smooth_mode();
+    mode=1;
+    EB3Times=0;
+  }
+}
+
